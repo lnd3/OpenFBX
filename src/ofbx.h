@@ -753,7 +753,8 @@ double fbxTimeToSeconds(i64 value);
 i64 secondsToFbxTime(double value);
 
 // TODO nonconvex
-inline u32 triangulate(const GeometryData& geom, const GeometryPartition::Polygon& polygon, int* tri_indices) {
+inline u32 triangulate(const GeometryData& /*geom*/, const GeometryPartition::Polygon& polygon, int* tri_indices)
+{
 	if (polygon.vertex_count < 3) return 0;
 	if (polygon.vertex_count == 3) {
 		tri_indices[0] = polygon.from_vertex;
